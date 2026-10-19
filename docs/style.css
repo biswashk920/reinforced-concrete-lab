@@ -1,0 +1,21 @@
+:root{--bg:#f3f5f4;--fg:#1b2624;--card:#fff;--ac:#0f6b5c;--bad:#b3261e;--ok:#1b7a3d;--bd:#cfd8d5}
+@media(prefers-color-scheme:dark){:root{--bg:#121917;--fg:#e4ecea;--card:#1b2522;--ac:#4fc3ad;--bad:#ff8a80;--ok:#7bd88f;--bd:#33423e}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 "Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+header,footer{padding:18px 24px}h1{margin:0;font:600 26px Georgia,serif}header p{margin:2px 0 0;opacity:.7}
+main{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:18px;padding:0 24px}@media(max-width:800px){main{grid-template-columns:1fr}}
+section{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:16px;min-width:0}h2{margin:0 0 10px;font:600 17px Georgia,serif}
+label{display:block;font-size:13px;margin:8px 0 2px}input,select{width:100%;padding:6px;border:1px solid var(--bd);border-radius:4px;background:var(--bg);color:var(--fg);font:inherit}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}button{padding:8px 12px;border:0;border-radius:4px;background:var(--ac);color:var(--bg);font:inherit;cursor:pointer}button.alt{background:none;border:1px solid var(--ac);color:var(--ac)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+table{width:100%;border-collapse:collapse;margin:6px 0 16px;font-size:14px}td,th{padding:4px 6px;border-bottom:1px solid var(--bd);text-align:left}
+.ok{color:var(--ok);font-weight:600}.bad{color:var(--bad);font-weight:600}.warn{color:var(--bad)}.hint{opacity:.7}
+svg{max-width:100%;height:auto}.figs{display:flex;gap:16px;flex-wrap:wrap}.big{font:600 18px Georgia,serif;margin:0 0 10px}
+@media print{header p,#inputs,footer{display:none}main{display:block;padding:0}body{background:#fff;color:#000}}
+[hidden]{display:none!important}
+nav{padding:0 24px 14px;display:flex;gap:8px}nav button{background:none;border:1px solid var(--ac);color:var(--ac)}nav button[aria-pressed=true]{background:var(--ac);color:var(--bg)}
+@media print{nav,#cin{display:none}}
+.v3bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:6px 0}.v3bar label{font-size:13px;display:flex;gap:4px;align-items:center}.v3bar input[type=checkbox],.v3bar input[type=range]{width:auto}
+#v3b,#v3c{position:relative}canvas[aria-label^="3D"]{width:100%;border:1px solid var(--bd);border-radius:6px;touch-action:none;cursor:grab;color:var(--fg)}
+.v3tip{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--bd);padding:3px 7px;border-radius:4px;font-size:12px;z-index:2}
+#guide{margin:18px 24px;background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:12px 16px}#guide summary{cursor:pointer}#guide li{margin:4px 0}
+@media print{.v3bar,#guide{display:none}}
